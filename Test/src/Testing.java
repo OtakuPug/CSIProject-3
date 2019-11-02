@@ -10,33 +10,34 @@ import java.awt.event.ActionListener;
 
 public class Testing extends DialogProgram {
 	
-	//Declaration Section 
+	/* Declaration Section */ 
 	Accumulator acc = new Accumulator();//Creates a new Accumulator to be used in this Class
 	DoubleField screen = new DoubleField(); //creates a new DoubleField called screen to visually present numbers and computations 
 	
 	public void init() { //innit method for the creation and customization of Panels, buttons, and grids.
 		
-		//Panel Section
+		/* Panel Section */
 		JPanel inputPanel = new JPanel();//creates a new JPanel for input
 		  FlowLayout layout = new FlowLayout();//creates a new FlowLayout to be used in this Class
 		  inputPanel.setLayout(layout);//sets the layout of inputPanel to the current layout of FlowLayout
 		  
-		  //Screen Section
+		  /* Screen Section */
 		  inputPanel.add(screen);//adds screen to the inputPanel
 		  add(inputPanel); //adds to the Panel
 		  inputPanel.setLayout(new GridLayout(1,1,1,1));//sets a grid on input panel
 		  inputPanel.setSize(1,1);//determines panel size
 		  screen.setPreferredSize(new Dimension(200,350));//determines screen size
 		  
-		  //Creating The Grid and Layout
+		  /* Creating The Grid and Layout */
 		  JPanel samplePanel = new JPanel();//makes a new panel
 		  GridLayout ButtonLayout = new GridLayout(5, 4);//sets a grid layout for a button layout
 		  samplePanel.setLayout(ButtonLayout);//adds the grid layout to the samplePanel
 		  
-		/*Button Section
-		 *1. creates a new button 
-		 *2. adds it to the grid
-		 *3. adds a listener to wait for an action to be performed
+		 /* Button Section */
+		/*
+		 * 1. creates a new button 
+		 * 2. adds it to the grid
+		 * 3. adds a listener to wait for an action to be performed
 		*/
 		  JButton secondPowerButton = new JButton("x^2");
 		  samplePanel.add(secondPowerButton);
@@ -138,10 +139,10 @@ public class Testing extends DialogProgram {
 		  
 		  add(samplePanel);
 		  
-	} //end of the innit method
+	} /* end of the innit method */
 	
 	
-	 	//Listener Section
+	 	/* Listener Section */
 		public void actionPerformed(ActionEvent e) {
 		//When a button is clicked it will perform the respective action in this method	
 			
@@ -276,7 +277,7 @@ public class Testing extends DialogProgram {
 		}
 		
 		
-	}//end of the MyCalculator Class
+	} /* end of the MyCalculator Class */
 
 
 
